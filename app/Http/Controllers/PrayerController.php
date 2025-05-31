@@ -32,10 +32,20 @@ class PrayerController extends Controller
         ]);
 
         $data['user_id'] = Auth::id();
+
+        // Si admin, publier directement, sinon mettre en attente
+        if (Auth::user()->role == 'admin') {
+            $data['status'] = 'published';
+        } else {
+            $data['status'] = 'pending'; // ou null si tu préfères
+        }
+
         Prayer::create($data);
 
         return redirect()->route('prayers.index')
-                         ->with('success', 'Votre prière a été soumise et sera examinée.');
+                        ->with('success', Auth::user()->role === 'admin'
+                            ? 'Votre prière a été publiée avec succès.'
+                            : 'Votre prière a été soumise et sera examinée.');
     }
 
     // Liste admin des prières en attente

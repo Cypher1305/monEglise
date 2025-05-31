@@ -15,7 +15,7 @@
                 <li><a href="{{ route('home') }}" class="{{ request()->routeIs('home') ? 'active' : '' }}"><i class='bx bx-home'></i> Accueil</a></li>
                 <li><a href="{{ route('events.index') }}" class="{{ request()->routeIs('events.index') ? 'active' : '' }}"><i class='bx bx-book-open'></i> Agenda</a></li>
                 <li class="dropdown">
-                    <a class="{{ request()->routeIs('community*') ? 'active' : '' }}">
+                    <a id="community" class="{{ request()->routeIs('community*') ? 'active' : '' }}">
                         <i class='bx bx-group'></i> Communauté <i class='bx bx-chevron-down'></i>
                     </a>
                     <ul class="dropdown-menu">
@@ -37,6 +37,13 @@
                             </a>
                         </li>
                         @endguest
+                         {{-- Témoignages --}}
+                        <li>
+                            <a href="{{ route('testimonies.index') }}"
+                            class="{{ request()->routeIs('testimonies.index') ? 'active' : '' }}">
+                                <i class='bx bx-chat'></i> Témoignages
+                            </a>
+                        </li>
                         <li>
                             <a href="{{ route('donation') }}" class="{{ request()->routeIs('donation') ? 'active' : '' }}">
                                 <i class='bx bx-donate-heart'></i> Faire un don
@@ -66,9 +73,26 @@
             </ul>
         </nav>
         <div class="header-social">
-            <a href="#" aria-label="Facebook"><i class='bx bxl-facebook'></i></a>
-            <a href="#" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
-            <a href="#" aria-label="YouTube"><i class='bx bxl-youtube'></i></a>
+            <a href="https://www.facebook.com/mouvementreveilmethodiste/?_rdc=1&_rdr#" aria-label="Facebook"><i class='bx bxl-facebook'></i></a>
+            <a href="https://mouvementreveilmethodiste.over-blog.com/2015/05/qui-sommes-nous.html"
+                target="_blank"
+                rel="noopener"
+                aria-label="Blog">
+                <i class='bx bx-news'></i>
+            </a>
+            <a href="https://www.youtube.com/@morevtv2258" aria-label="YouTube"><i class='bx bxl-youtube'></i></a>
+             {{-- **icône Dashboard visible en @auth --}}
+            @auth
+                @if(auth()->check() && auth()->user()->role === 'admin')
+                    <a href="{{ route('admin.dashboard') }}" aria-label="Admin Dashboard">
+                        <i class='bx bx-tachometer'></i>
+                    </a>
+                @else
+                    <a href="{{ route('dashboard') }}" aria-label="Mon Dashboard">
+                        <i class='bx bx-tachometer'></i>
+                    </a>
+                @endif
+            @endauth
         </div>
         <button class="menu-toggle" id="menu-toggle" aria-label="Ouvrir le menu">
             <i class='bx bx-menu'></i>

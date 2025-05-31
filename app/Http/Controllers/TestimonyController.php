@@ -32,11 +32,22 @@ class TestimonyController extends Controller
         ]);
 
         $data['user_id'] = Auth::id();
+
+        // Auto-publier si admin
+        if (Auth::user()->role === 'admin') {
+            $data['status'] = 'published';
+        } else {
+            $data['status'] = 'pending';
+        }
+
         Testimony::create($data);
 
         return redirect()->route('testimonies.index')
-                         ->with('success', 'Votre témoignage a été soumis et sera examiné.');
+                        ->with('success', Auth::user()->role === 'admin'
+                            ? 'Votre témoignage a été publié avec succès.'
+                            : 'Votre témoignage a été soumis et sera examiné.');
     }
+
 
     // Liste admin de tous les témoignages
     public function adminIndex()

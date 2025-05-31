@@ -27,9 +27,14 @@
             <div class="footer-widget">
                 <h4><i class='bx bx-share-alt'></i> Suivez-nous</h4>
                 <div class="footer-social">
-                    <a href="#" aria-label="Facebook"><i class='bx bxl-facebook'></i></a>
-                    <a href="#" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
-                    <a href="#" aria-label="YouTube"><i class='bx bxl-youtube'></i></a>
+                    <a href="https://www.facebook.com/mouvementreveilmethodiste/?_rdc=1&_rdr#" aria-label="Facebook"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://mouvementreveilmethodiste.over-blog.com/2015/05/qui-sommes-nous.html"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="Blog">
+                        <i class='bx bx-news'></i>
+                    </a>
+                    <a href="https://www.youtube.com/@morevtv2258" aria-label="YouTube"><i class='bx bxl-youtube'></i></a>
                 </div>
             </div>
         </div>

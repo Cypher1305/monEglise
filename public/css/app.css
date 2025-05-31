@@ -730,6 +730,9 @@ select {
     max-width: 1536px;
   }
 }
+.visible {
+  visibility: visible;
+}
 .collapse {
   visibility: collapse;
 }
@@ -1250,6 +1253,9 @@ select {
 .to-indigo-600 {
   --tw-gradient-to: #4f46e5 var(--tw-gradient-to-position);
 }
+.fill-current {
+  fill: currentColor;
+}
 .fill-red-500 {
   fill: #ef4444;
 }
@@ -1596,7 +1602,7 @@ select {
   display: block;
   border-radius: 0.25rem;
   --tw-bg-opacity: 1;
-  background-color: rgb(59 130 246 / var(--tw-bg-opacity, 1));
+  background-color: rgb(22 101 52 / var(--tw-bg-opacity, 1));
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   padding-left: 1.25rem;
@@ -1617,7 +1623,7 @@ select {
 
 .btn-dashboard:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(37 99 235 / var(--tw-bg-opacity, 1));
+  background-color: rgb(21 128 61 / var(--tw-bg-opacity, 1));
 }
 
 .default\:col-span-full:default {
@@ -1675,6 +1681,11 @@ select {
 .hover\:bg-green-600:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(22 163 74 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-green-900:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(20 83 45 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:bg-red-600:hover {
@@ -2203,4 +2214,5 @@ select {
     color: rgb(209 213 219 / var(--tw-text-opacity, 1));
   }
 }
+
 

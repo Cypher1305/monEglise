@@ -62,7 +62,11 @@
             @auth
               <div class="mt-4 flex space-x-2">
                 <textarea class="new-comment flex-1 border rounded px-2 py-1" placeholder="Écrire un commentaire…" rows="2"></textarea>
-                <button class="btn-add-comment px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Commenter</button>
+                <button
+                    class="btn-add-comment transform hover:scale-105 hover:shadow-lg hover:bg-[#0d8e67] transition duration-300"
+                    style="background-color:#0c6e4f; padding:.5rem 1rem; color:white; border-radius:.25rem;">
+                    Commenter
+                  </button>
               </div>
             @endauth
           </div>

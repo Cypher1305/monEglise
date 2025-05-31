@@ -3,5 +3,7 @@
 @tailwind utilities;
 
 .btn-dashboard {
-  @apply block bg-blue-500 text-white font-semibold text-center py-3 px-5 rounded shadow hover:bg-blue-600 transition;
+  @apply block bg-green-800 text-white font-semibold text-center
+         py-3 px-5 rounded shadow hover:bg-green-700 transition;
 }
+

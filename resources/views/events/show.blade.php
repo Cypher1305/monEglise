@@ -11,7 +11,8 @@
       <p><strong>Fin :</strong> {{ $event->end_date->format('d/m/Y H:i') }}</p>
     @endif
     <a href="{{ route('admin.events.index') }}"
-       class="inline-block mt-6 px-4 py-2 bg-gray-500 text-white rounded">
+      style="background-color:#0c6e4f; padding:.2rem 1rem; color:white; border-radius:.25rem;"
+      class="transform hover:scale-105 hover:shadow-lg hover:bg-[#0d8e67] transition duration-300">
        Retour à la liste
     </a>
   </div>
